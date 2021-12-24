@@ -1,0 +1,47 @@
+.footer {
+  width: 100%;
+  background-color: #333;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #fff;
+  font-family: $roboto;
+  .container {
+    @include flexbt(center, center, column);
+    .footer-hdr {
+      margin-bottom: 20px;
+    }
+  }
+  .contact {
+    height: max-content;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 768px) {
+      @include flexbt(center, flex-start, row);
+    }
+    .contact-menu {
+      @include flexbt(center, center, column);
+      margin-bottom: 20px;
+      @media (min-width: 768px) {
+        margin-right: 50px;
+        margin-bottom: 0;
+      }
+      i {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      i:hover {
+        color: #2ed573;
+        transform: scale(120%);
+        transition: 0.3s;
+      }
+      h5 {
+        margin-bottom: 5px;
+      }
+      h6,
+      h5 {
+        text-align: center;
+      }
+    }
+  }
+}

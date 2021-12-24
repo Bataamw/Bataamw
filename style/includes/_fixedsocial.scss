@@ -1,0 +1,58 @@
+.social {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  top: 40%;
+  background-color: $maincolor;
+  z-index: 1000;
+  @include flexbt(center, center, column);
+  padding: 1rem 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  @media (min-width: 1024px) {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+  }
+  i {
+    color: $fontcolor;
+    font-size: 25px;
+    margin-top: 0.5rem;
+  }
+  .fa-youtube {
+    font-size: 23px;
+  }
+  i:hover {
+    transform: scale(120%);
+    transition: 0.3s;
+  }
+  .fa-youtube:hover {
+    color: #ff0000;
+  }
+  .fa-facebook-square:hover {
+    color: #2e86de;
+  }
+  .fa-github-square:hover {
+    color: #7f8c8d;
+  }
+  .fa-instagram-square:hover {
+    background: radial-gradient(
+        circle farthest-corner at 32% 106%,
+        rgb(255, 225, 125) 0%,
+        rgb(255, 205, 105) 10%,
+        rgb(250, 145, 55) 28%,
+        rgb(235, 65, 65) 42%,
+        transparent 82%
+      ),
+      linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.social:hover i {
+  font-size: 40px;
+}

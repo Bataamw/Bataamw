@@ -1,0 +1,31 @@
+.fixedmenu {
+  position: fixed;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  top: 40%;
+  right: 0;
+  background-color: $maincolor;
+  z-index: 10000;
+  @include flexbt(center, center, column);
+  padding: 1rem 1rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  @media (min-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+  }
+  i {
+    color: $fontcolor;
+    font-size: 25px;
+    margin-top: 0.5rem;
+  }
+  i:hover {
+    transform: scale(120%);
+    transition: 0.3s;
+    color: #2ed573;
+  }
+}

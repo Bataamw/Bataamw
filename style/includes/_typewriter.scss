@@ -1,0 +1,119 @@
+#fragment1 {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: frag1type 3s steps(50, end);
+}
+@keyframes frag1type {
+  from {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+#fragment2 {
+  opacity: 0;
+  width: 100%;
+  white-space: nowrap;
+
+  overflow: hidden;
+  animation: frag2type 5s steps(50, end) 1.5s;
+}
+@keyframes frag2type {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  37% {
+    width: 100%;
+    opacity: 1;
+  }
+  49% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 1;
+  }
+}
+#fragment3 {
+  opacity: 0;
+  width: 100%;
+  margin-top: -75px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: frag3type 7s steps(50, end) 4s;
+}
+@keyframes frag3type {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  37% {
+    width: 100%;
+    opacity: 1;
+  }
+  49% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 1;
+  }
+}
+#fragment4 {
+  opacity: 0;
+  width: 100%;
+  margin-top: -75px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: frag4type 7s steps(50, end) 8s;
+}
+@keyframes frag4type {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  37% {
+    width: 100%;
+    opacity: 1;
+  }
+  49% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 1;
+  }
+}
+#fragment5 {
+  opacity: 0;
+  margin-top: -68px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: frag5type 4s steps(50, end) 12s infinite;
+}
+@keyframes frag5type {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+.fragment {
+  font-size: 50px;
+  font-family: "Bakbak One", cursive;
+  font-weight: bold;
+  color: #444;
+}
+.typewriter {
+  padding-left: 30px;
+}

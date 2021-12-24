@@ -1,0 +1,151 @@
+section {
+  height: max-content;
+  padding-top: 20px;
+}
+.about {
+  .myhiddenpictures {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    img {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      visibility: visible;
+      opacity: 1;
+      .img-3 {
+        grid-row: 3/4;
+      }
+    }
+  }
+
+  .about-text {
+    margin-top: 80px;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    position: relative;
+    img {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      top: -60px;
+      left: 35%;
+      box-shadow: inset 2px 2px 3px#babecc, 2px 2px 3px #fff;
+      @media (min-width: 596px) {
+        left: 40%;
+      }
+    }
+  }
+}
+.section-hdr {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  font-family: $sectionhdrfont;
+  color: #696969;
+  width: max-content;
+  text-shadow: 1px 2px 0 #fff;
+  border-radius: 20px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.section-hdr:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  font-size: 19px;
+  text-shadow: 1px 2px 0 #fff;
+  color: #a4b0be;
+}
+.section-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  font-family: $sectiontextfont;
+  text-align: justify;
+  color: #444;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: inset 2px 2px 3px#babecc, 2px 2px 3px #fff;
+}
+.skill-container {
+  height: max-content;
+  border-radius: 20px;
+  box-shadow: inset 2px 2px 3px#babecc, 2px 2px 3px #fff;
+  padding: 20px 20px;
+  .skill {
+    font-family: $roboto;
+    color: #696969;
+    text-shadow: 1px 2px 0 #fff;
+    padding: 10px 30px;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    margin-top: 10px;
+    z-index: 1000;
+    overflow: hidden;
+  }
+  .skill > div {
+    content: "";
+    background-color: #1dd1a1;
+    position: absolute;
+    height: 85%;
+    transition: 0.3s all ease-in-out;
+    left: -5%;
+    top: 3px;
+    border-radius: 20px;
+  }
+  .html-per {
+    width: 98%;
+  }
+  .css-per {
+    width: 95%;
+  }
+  .sass-per {
+    width: 96%;
+  }
+  .bootstrap-per {
+    width: 85%;
+  }
+  .tailwind-per {
+    width: 88%;
+  }
+  .c-per {
+    width: 60%;
+  }
+  .designing-per {
+    width: 90%;
+  }
+  .visualbasic-per {
+    width: 87%;
+  }
+}
+.project {
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .jobs {
+    @include flexbt(center, center, row);
+    text-align: center;
+    p {
+      font-family: $sectionhdrfont;
+    }
+  }
+}

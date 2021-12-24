@@ -1,0 +1,218 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-color: $maincolor;
+  padding-bottom: 20px;
+  .nav {
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    background-color: $maincolor;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    @media (min-width: 768px) {
+      position: static;
+    }
+    .container {
+      @include flexbt(space-between, center, row);
+
+      .menu-hidden {
+        padding-left: 18px;
+        padding-right: 18px;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s;
+
+        @media (min-width: 768px) {
+          @include flexbt(space-between, center, row);
+          opacity: 1;
+          visibility: visible;
+          transition: all 0.4s;
+        }
+        .current a {
+          color: #fff;
+        }
+        .current {
+          background-image: radial-gradient(
+              circle farthest-side at 100% 100%,
+              #9873ff,
+              rgba(152, 115, 255, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 100% 0,
+              #0ba5f7,
+              rgba(85, 196, 255, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 0 0,
+              #ff763c,
+              rgba(255, 176, 60, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 0 100%,
+              #ff5aaa,
+              rgba(255, 90, 170, 0)
+            );
+        }
+        li {
+          height: 100%;
+          cursor: pointer;
+          padding: 0.5rem 0.5rem;
+          a {
+            color: #777;
+            font-family: $roboto;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: -0.011em;
+          }
+        }
+        li:hover a {
+          color: #fff;
+          transition: all 0.3s;
+        }
+        li:hover {
+          transition: all 0.3s;
+          background-image: radial-gradient(
+              circle farthest-side at 100% 100%,
+              #9873ff,
+              rgba(152, 115, 255, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 100% 0,
+              #0ba5f7,
+              rgba(85, 196, 255, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 0 0,
+              #ff763c,
+              rgba(255, 176, 60, 0)
+            ),
+            radial-gradient(
+              circle farthest-side at 0 100%,
+              #ff5aaa,
+              rgba(255, 90, 170, 0)
+            );
+          transform: scale(90%);
+        }
+      }
+      .logo {
+        font-size: 25px;
+        font-family: $sectionhdrfont;
+      }
+    }
+  }
+  .mypicture {
+    @include flexbt(center, center, row);
+    position: relative;
+    z-index: 2;
+    width: 25vw;
+    height: 25vw;
+    max-height: 40vh;
+    max-width: 40vh;
+    min-height: 200px;
+    min-width: 200px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-height: 768px) {
+      min-height: 350px;
+      min-width: 350px;
+    }
+
+    .shadow-1 {
+      position: absolute;
+      left: -20%;
+      top: -20%;
+      right: 0;
+      bottom: 0;
+      width: 140%;
+      height: 140%;
+      padding: 20%;
+      border-radius: 50%;
+      filter: blur(20px);
+      .img-shadow {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-image: radial-gradient(
+            circle farthest-side at 100% 100%,
+            #9873ff,
+            rgba(152, 115, 255, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 100% 0,
+            #0ba5f7,
+            rgba(85, 196, 255, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 0 0,
+            #ff763c,
+            rgba(255, 176, 60, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 0 100%,
+            #ff5aaa,
+            rgba(255, 90, 170, 0)
+          );
+      }
+    }
+    .shadow-2 {
+      z-index: 1;
+      position: absolute;
+      left: -20%;
+      top: -20%;
+      right: 0;
+      bottom: 0;
+      width: 140%;
+      height: 140%;
+      padding: 20%;
+      border-radius: 50%;
+      filter: blur(20px);
+      .img-shadow {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-image: radial-gradient(
+            circle farthest-side at 100% 100%,
+            #9873ff,
+            rgba(152, 115, 255, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 100% 0,
+            #0ba5f7,
+            rgba(85, 196, 255, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 0 0,
+            #ff763c,
+            rgba(255, 176, 60, 0)
+          ),
+          radial-gradient(
+            circle farthest-side at 0 100%,
+            #ff5aaa,
+            rgba(255, 90, 170, 0)
+          );
+      }
+    }
+    .myzurag {
+      position: relative;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      border: 1px solid hsla(0, 0%, 100%, 0.3);
+      border-radius: 50%;
+      background-color: hsla(0, 0%, 84%, 0.5);
+      object-fit: cover;
+      .myimg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        border-radius: 50%;
+      }
+    }
+  }
+}

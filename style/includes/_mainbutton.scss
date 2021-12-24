@@ -1,0 +1,26 @@
+.mainbutton {
+  width: 100%;
+  @include flexbt(center, center, row);
+  margin-top: 80px;
+  .button {
+    background-color: $maincolor;
+    padding: 20px 60px;
+    border-radius: 30px;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $roboto;
+    color: #696969;
+    text-shadow: 1px 2px 0 #fff;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+    font-size: 13px;
+  }
+  .button:active {
+    box-shadow: inset 1px 1px 2px#babecc, -1px -1px 3px #fff;
+  }
+}
